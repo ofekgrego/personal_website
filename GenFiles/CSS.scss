@@ -1,0 +1,306 @@
+:root{
+    --bg-color: white;
+    --main-color: #20929C;
+    --text-color: black;
+    // --font-main: "Source Sans Pro", monospace;
+    --font-main: "Helvetica";
+    --ani-time: 0.8s;
+    --bubble-time: 80s;
+}
+
+@-webkit-keyframes fadeInDownNav {
+  0% {
+     opacity: 0.5;
+     -webkit-transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDownNav {
+  0% {
+     opacity: 0;
+     -webkit-transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownNav {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+.navbar {
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+  
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-name: fadeInDownNav;
+    animation-name: fadeInDownNav;
+}
+  
+.logo {
+    margin-right: auto;
+    color: var(--text-color);
+    font-size: clamp(2rem, 3vw, 3rem);
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+  
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    text-decoration: none;
+}
+  
+.nav__links li {
+    padding: 0px 20px;
+}
+  
+.nav__links li a {
+    transition: all 0.4s ease 0s;
+}
+  
+.nav__links li a:hover {
+    color: var(--second-color); 
+}
+  
+  
+  /* Mobile Nav */
+  
+.menu {
+    display: none;
+}
+  
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+  
+.overlay--active {
+    width: 100%;
+    z-index: 2;
+}
+  
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+  
+.overlay a:hover,
+.overlay a:focus {
+    color: var(--second-color);
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+  
+@media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+  
+@media only screen and (max-width: 900px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+}
+
+
+
+.bubbles-1{
+    position: absolute;
+    top: 60%;
+    left: -5%;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    opacity: 0.7;
+    background-image: linear-gradient(56deg, var(--main-color),var(--second-color));
+    box-shadow: 0 0 16px 16px white inset;
+    animation: Move1 var(--bubble-time) infinite;
+    pointer-events: none;
+}
+
+.bubbles-2{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    opacity: 0.7;
+    background-image: linear-gradient(56deg, var(--main-color),var(--second-color));
+    box-shadow: 0 0 8px 8px white inset;
+    animation: Move2 var(--bubble-time) infinite;
+    pointer-events: none;
+}
+
+.bubbles-3{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    opacity: 0.7;
+    background-image: linear-gradient(56deg, var(--main-color),var(--second-color));
+    box-shadow: 0 0 8px 8px white inset;
+    animation: Move3 var(--bubble-time) infinite;
+    pointer-events: none;
+}
+
+.bubbles-4{
+    position: absolute;
+    top: 90%;
+    right: 20%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    opacity: 0.7;
+    background-image: linear-gradient(56deg, var(--main-color),var(--second-color));
+    box-shadow: 0 0 8px 8px white inset;
+    animation: Move4 var(--bubble-time) infinite;
+    pointer-events: none;
+}
+
+.mainText {
+    padding-top: 20%;
+    margin: 0;
+    font-family: var(--font-main);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+
+.mainText h1 {
+    font-size: clamp(1rem, 20vw + 1rem, 5rem);
+    position: relative;
+    opacity: 0;
+    animation: FadeIn var(--ani-time) forwards;
+}
+
+.mainText a{
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.mainText p {
+    font-size: clamp(0.5rem, 5vw + 0.5rem, 3rem);
+    opacity: 0;
+    animation: FadeIn var(--ani-time) var(--ani-time) forwards;
+}
+
+@keyframes FadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes Move1 {
+    0%, 100% {
+        top: 90%
+      }
+      50% {
+        top: 30%;
+      }
+}
+
+@keyframes Move2 {
+    0%, 100% {
+        top: 20%;
+        right: 5%;
+      }
+      50% {
+        top: 0%;
+        right: 10%;
+      }
+}
+
+@keyframes Move3 {
+    0%, 100% {
+        top: 50%;
+        right: 40%;
+      }
+      50% {
+        top: 70%;
+        right: 20%;
+      }
+}
+
+@keyframes Move4 {
+    0%, 100% {
+        top: 90%;
+        right: 20%;
+      }
+      50% {
+        top: 120%;
+        right: 0%;
+      }
+}

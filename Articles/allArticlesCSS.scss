@@ -1,0 +1,41 @@
+:root{
+    --second-color: #4096ff;
+}
+
+
+.main{
+    padding-top: 3vw;
+    padding-left: clamp(5rem,15vw,30rem);
+    padding-right: clamp(5rem,15vw,30rem);
+    font-family: var(--font-main);
+    color: var(--text-color);
+    align-items: center;
+}
+
+.main h1{
+    color: var(--second-color);
+    font-size: clamp(5rem, 6vw, 6rem);
+    margin-top: -1vw;
+}
+
+.main h2{
+    margin-top: -2vw;
+    padding-bottom: 10%;
+}
+
+.main a{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    text-decoration-color: var(--second-color);
+    text-decoration: underline;
+}
+
+.main p{
+    padding-bottom: 10%;
+    font-size: clamp(1.5rem, 1.5vw, 1.6rem);
+    white-space: pre-line;
+}
+
+.main img{
+    width: 100%;
+    padding: 4% 4% 4% 4%;
+}

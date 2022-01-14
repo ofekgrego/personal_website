@@ -1,0 +1,78 @@
+:root{
+    --second-color: #5ca388;
+}
+
+.mainText{
+    padding-bottom: 20%;
+}
+
+.allProjects {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .allProjects::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--second-color);
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .project {
+    padding: 50px 200px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    left: 10%;
+  }
+  
+  /* The circles on the timeline */
+  .project::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--bg-color);
+    border: 4px solid var(--second-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  /* Fix the circle for containers on the right side */
+  .project::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .project {
+    padding: 20px 30px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .project h3{
+      font-weight: 900;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .project h1{
+      color: var(--second-color);
+      font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  .project p{
+      padding-bottom: 20%;
+      font-size: clamp(1.3rem, 2vw, 2rem);
+  }

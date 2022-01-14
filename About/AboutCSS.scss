@@ -1,0 +1,32 @@
+:root{
+    --second-color: #69f7e9;
+}
+
+.body{
+    text-align: center;
+    --font-main: "Source Sans Pro", monospace;
+}
+
+.info{
+    // padding-top: 30%;
+    // padding-left: 10%;
+    // font-family: var(--font-main);
+    // z-index: 5;
+    // font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+    // position:absolute;
+    padding: 15%;
+    padding-top: 10%;
+    margin: 0;
+    z-index: 5;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: var(--font-main);
+}
+
+
+.info a{
+    display: inline-block;
+}
+
+.info img{
+    width: clamp(50px,10vw,100px);
+}
